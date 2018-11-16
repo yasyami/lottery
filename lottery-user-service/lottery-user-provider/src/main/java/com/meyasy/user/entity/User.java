@@ -1,4 +1,4 @@
-package com.meyasy.user.dao.entity;
+package com.meyasy.user.entity;
 
 import java.util.Date;
 

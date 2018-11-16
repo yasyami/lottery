@@ -1,19 +1,33 @@
 package com.meyasy.user;
 
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-import org.springframework.boot.SpringApplication;
+import com.meyasy.user.entity.User;
+import com.meyasy.user.persistence.dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * Hello world!
- *
  */
 @SpringBootApplication
-@EnableDubboConfiguration
-public class UserProviderApp
-{
-    public static void main( String[] args )
-    {
-        SpringApplication.run(UserProviderApp.class,args);
+public class UserProviderApp {
+
+
+    private static UserDao userDao;
+    @Autowired
+    public UserProviderApp( UserDao userDao) {
+        this.userDao = userDao;
     }
+
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(UserProviderApp.class).web(WebApplicationType.NONE).run(args);
+
+        User userByUid = userDao.getUserByUid(1);
+
+        System.out.println(userByUid.getRealname());
+    }
+
+
+
 }
