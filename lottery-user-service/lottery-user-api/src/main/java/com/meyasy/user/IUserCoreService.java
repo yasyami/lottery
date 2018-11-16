@@ -1,7 +1,29 @@
 package com.meyasy.user;
 
-public interface IUserCoreService {
+import com.meyasy.user.dto.*;
 
-    public void test ();
+public interface IUserCoreService {
+    /**
+     * 登录方法
+     * @param request
+     * @return
+     */
+    UserLoginResponse login(UserLoginRequest request);
+
+    /**
+     * 校验token
+     * @param request
+     * @return
+     */
+    CheckAuthResponse validToken(CheckAuthRequest request);
+
+    /**
+     * 注册方法
+     * @param request
+     * @return
+     */
+    UserRegisterResponse register(UserLoginRequest request);
+
+
 
 }

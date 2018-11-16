@@ -2,6 +2,7 @@ package com.meyasy.user.services;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.meyasy.user.IUserCoreService;
+import com.meyasy.user.dto.*;
 import org.springframework.beans.factory.annotation.Value;
 
 @Service(version = "${demo.service.version}",
@@ -10,11 +11,18 @@ import org.springframework.beans.factory.annotation.Value;
         registry = "${dubbo.registry.id}")
 public class UserCoreServiceImpl implements IUserCoreService {
 
-    @Value("${dubbo.registry.address}")
-    private  String registerId ;
+    @Override
+    public UserLoginResponse login(UserLoginRequest request) {
+        return null;
+    }
 
     @Override
-    public void test() {
-        System.out.println(registerId);
+    public CheckAuthResponse validToken(CheckAuthRequest request) {
+        return null;
+    }
+
+    @Override
+    public UserRegisterResponse register(UserLoginRequest request) {
+        return null;
     }
 }
