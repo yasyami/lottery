@@ -1,8 +1,8 @@
-package com.meyasy.user.dao.persistence;
+package com.meyasy.user.persistence.dao;
 
-import com.meyasy.user.dao.entity.User;
+import com.meyasy.user.entity.User;
 
-public interface UserMapper {
+public interface UserDao {
 
     /**
      *
