@@ -1,19 +1,17 @@
 package com.meyasy.user;
 
-import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * Hello world!
- *
  */
 @SpringBootApplication
-@EnableDubboConfiguration
-public class UserProviderApp
-{
-    public static void main( String[] args )
-    {
-        SpringApplication.run(UserProviderApp.class,args);
+public class UserProviderApp {
+
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(UserProviderApp.class).web(WebApplicationType.NONE).run(args);
     }
+
 }

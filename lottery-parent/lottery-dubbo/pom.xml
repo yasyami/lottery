@@ -48,10 +48,15 @@
                 <version>0.10</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.alibaba.spring.boot/dubbo-spring-boot-starter -->
+            <!--<dependency>-->
+                <!--<groupId>com.alibaba.spring.boot</groupId>-->
+                <!--<artifactId>dubbo-spring-boot-starter</artifactId>-->
+                <!--<version>2.0.0</version>-->
+            <!--</dependency>-->
             <dependency>
-                <groupId>com.alibaba.spring.boot</groupId>
+                <groupId>com.alibaba.boot</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>2.0.0</version>
+                <version>0.2.0</version>
             </dependency>
             <!--mybatis and mysql-->
             <dependency>

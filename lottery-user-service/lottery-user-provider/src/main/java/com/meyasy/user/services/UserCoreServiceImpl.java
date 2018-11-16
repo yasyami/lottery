@@ -2,14 +2,19 @@ package com.meyasy.user.services;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.meyasy.user.IUserCoreService;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 
-@Service
-@Component
+@Service(version = "${demo.service.version}",
+        application = "${dubbo.application.id}",
+        protocol = "${dubbo.protocol.id}",
+        registry = "${dubbo.registry.id}")
 public class UserCoreServiceImpl implements IUserCoreService {
+
+    @Value("${dubbo.registry.address}")
+    private  String registerId ;
 
     @Override
     public void test() {
-        System.out.println(12333);
+        System.out.println(registerId);
     }
 }

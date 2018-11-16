@@ -1,0 +1,52 @@
+#dubbo配置
+spring:
+  application:
+    name: lottery-user-provider
+  datasource:
+    druid:
+      url: jdbc:mysql://meyasy.com:3306/user?useUnicode=true&characterEncoding=utf8&useOldAliasMetadataBehavior=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      username: root
+      password: Rm3/w7v678k7mjklZnemgqGqTQKCIjPwUhq11o6d08q7XljtFeLI249X93J0XpUCMQHykqJ0R4OYZGy67ES4EQ==
+      initial-size: 2
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      stat:
+        enabled: true
+        log-slow-sql: true
+        slow-sql-millis: 1000
+      config:
+        enabled: true
+        key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKCsI4jDrxfxZAiGqiaJJVevyHA2o05CHM7J3iFb2vcpd5wYhrefu8rfjQzS0AloTDCuop+FoB4U8WlAbjvEblcCAwEAAQ==
+      max-pool-prepared-statement-per-connection-size: 20
+dubbo:
+  application:
+    id: lottery-user-provider
+    name: lottery-user-provider
+    owner: meyasy
+  registry:
+    address: meyasy.com:2181
+    id: lottery-user-provider-registry
+    protocol: zookeeper
+    group: lottery-user-provider
+    file: /logs/cache/user-service.cache
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+    accesslog: /logs/dubbo-user.log
+  scan:
+    basePackages: com.meyasy.user.services
+demo:
+  service:
+    version:  1.0.0
+
+
+
+
