@@ -48,7 +48,7 @@ demo:
     version:  1.0.0
 mybatis:
   type-aliases-package: com.meyasy.user.entity
-  mapper-locations: classpath*:com/meyasy/user/persistence/mapper/*Mapper.xml
+  mapper-locations: classpath*:com\meyasy\user\persistence\mapper\*.xml
   configuration:
     jdbc-type-for-null: null
 
