@@ -46,6 +46,13 @@ dubbo:
 demo:
   service:
     version:  1.0.0
+mybatis:
+  type-aliases-package: com.meyasy.user.dao.persistence
+  mapper-locations: classpath*:com/meyasy/user/dao/mapper/*Mapper.xml
+  configuration:
+    jdbc-type-for-null: null
+
+
 
 
 
