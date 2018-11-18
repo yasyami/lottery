@@ -4,9 +4,9 @@ import com.meyasy.user.constants.ResponseCodeEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExcetionUtil {
+public class ExceptionUtil {
 
-    private static final Logger logger = LoggerFactory.getLogger(ExcetionUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(ExceptionUtil.class);
 
 
 

@@ -21,6 +21,8 @@ public class UserProviderApp {
     }
 
     public static void main(String[] args) {
+        System.setProperty("curator-default-session-timeout","60000");
+        System.setProperty("curator-default-connection-timeout","30000");
         new SpringApplicationBuilder(UserProviderApp.class).web(WebApplicationType.NONE).run(args);
 
         User userByUid = userDao.getUserByUid(1);
