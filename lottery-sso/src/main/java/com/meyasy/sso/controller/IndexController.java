@@ -13,7 +13,6 @@ public class IndexController {
     @Reference
     IUserQueryService userQueryService;
 
-
     @GetMapping("/")
     private UserQueryResponse index(){
         UserQueryRequest request = new UserQueryRequest();
