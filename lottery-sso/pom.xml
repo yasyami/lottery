@@ -34,6 +34,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.meyasy.user</groupId>
+			<artifactId>lottery-user-api</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

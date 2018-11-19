@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: lottery-sso
+dubbo:
+  application:
+    id: lottery-sso
+    name: lottery-sso
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  registry:
+    protocol: zookeeper
+    port: 2181
+    address: meyasy.com
+    group: lottery-user-provider
+    id: lottery-user-provider-registry
+lottery:
+  user:
+    service:
+      version:  1.0.0
+server:
+  port: 8081

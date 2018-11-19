@@ -43,9 +43,10 @@ dubbo:
     accesslog: /logs/dubbo-user.log
   scan:
     basePackages: com.meyasy.user.services
-demo:
-  service:
-    version:  1.0.0
+lottery:
+  user:
+    service:
+      version:  1.0.0
 mybatis:
   type-aliases-package: com.meyasy.user.entity
   mapper-locations: classpath*:com\meyasy\user\persistence\mapper\*.xml

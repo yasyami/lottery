@@ -1,12 +1,13 @@
 package com.meyasy.sso;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 public class LotterySsoApplication {
 
+
 	public static void main(String[] args) {
-		SpringApplication.run(LotterySsoApplication.class, args);
+		new SpringApplicationBuilder(LotterySsoApplication.class).run(args);
 	}
 }

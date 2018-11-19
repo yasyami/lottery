@@ -22,7 +22,7 @@ public interface IUserCoreService {
      * @param request
      * @return
      */
-    UserRegisterResponse register(UserLoginRequest request);
+    UserRegisterResponse register(UserRegisterRequest request);
 
 
 
