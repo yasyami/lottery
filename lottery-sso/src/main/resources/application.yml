@@ -11,6 +11,11 @@ spring:
       kaptcha.textproducer.font.size: "45"
       kaptcha.textproducer.char.length: "4"
       kaptcha.textproducer.font.names: 宋体,楷体,微软雅黑
+  mvc:
+    view:
+      prefix: /webapp/pages
+      suffix: .html
+    static-path-pattern:
 dubbo:
   application:
     id: lottery-sso

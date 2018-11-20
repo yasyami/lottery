@@ -43,9 +43,9 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
         if(isAnoymous(handlerMethod)){
             return true;
         }
-        if(!(bean instanceof BaseController)){
-            throw new RuntimeException("must extend basecontroller");
-        }
+//        if(!(bean instanceof BaseController)){
+//            throw new RuntimeException("must extend basecontroller");
+//        }
         String token= CookieUtil.getCookieValue(request,ACCESS_TOKEN);
         boolean isAjax=CookieUtil.isAjax(request);
         if(StringUtils.isEmpty(token)){
