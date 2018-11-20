@@ -42,6 +42,14 @@
 			<groupId>com.meyasy.user</groupId>
 			<artifactId>lottery-user-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.meyasy.common</groupId>
+			<artifactId>lottery-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
