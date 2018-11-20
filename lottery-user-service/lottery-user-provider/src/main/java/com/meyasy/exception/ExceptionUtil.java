@@ -1,4 +1,4 @@
-package com.meyasy.user.exception;
+package com.meyasy.exception;
 
 import com.meyasy.user.constants.ResponseCodeEnum;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.meyasy.user;
+package com.meyasy;
 
 import com.meyasy.user.entity.User;
 import com.meyasy.user.persistence.dao.UserDao;

@@ -1,13 +1,13 @@
 package com.meyasy.user.services;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.meyasy.exception.ExceptionUtil;
+import com.meyasy.exception.ValidateException;
 import com.meyasy.user.IUserQueryService;
 import com.meyasy.user.constants.ResponseCodeEnum;
 import com.meyasy.user.dto.UserQueryRequest;
 import com.meyasy.user.dto.UserQueryResponse;
 import com.meyasy.user.entity.User;
-import com.meyasy.user.exception.ExceptionUtil;
-import com.meyasy.user.exception.ValidateException;
 import com.meyasy.user.persistence.dao.UserDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

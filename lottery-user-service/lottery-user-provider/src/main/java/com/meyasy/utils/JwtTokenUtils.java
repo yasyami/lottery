@@ -1,4 +1,4 @@
-package com.meyasy.user.utils;
+package com.meyasy.utils;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -7,6 +7,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.joda.time.DateTime;
 
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
@@ -17,8 +18,7 @@ import java.util.UUID;
 public class JwtTokenUtils {
 
     public static void main(String[] args) {
-        System.out.println(UUID.randomUUID().
-                toString().replace("-",""));
+        System.out.println(DateTime.now().plusDays(1));
     }
 
     private static Key generatorKey(){
