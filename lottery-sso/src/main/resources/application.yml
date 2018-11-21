@@ -13,9 +13,10 @@ spring:
       kaptcha.textproducer.font.names: 宋体,楷体,微软雅黑
   mvc:
     view:
-      prefix: /webapp/pages
+      prefix: /pages
       suffix: .html
-    static-path-pattern:
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/static/pages/
 dubbo:
   application:
     id: lottery-sso

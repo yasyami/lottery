@@ -8,6 +8,7 @@ package com.meyasy.sso.controller;
 
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
+import com.meyasy.common.annotation.Anoymous;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,7 +24,7 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping("/captcha")
-public class CaptchaController {
+public class CaptchaController extends BaseController{
     @Resource
     private Producer captchaProducer;
 
@@ -37,6 +38,7 @@ public class CaptchaController {
      * @throws         IOException
      */
     @RequestMapping("/getCaptchaCode")
+    @Anoymous
     public ModelAndView getCaptchaCode(HttpServletRequest request, HttpServletResponse response) throws IOException{
         HttpSession session = request.getSession();
 

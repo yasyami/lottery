@@ -10,6 +10,8 @@ public class WebConfiguration implements WebMvcConfigurer{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new TokenInterceptor());
+        registry.addInterceptor(new TokenInterceptor())
+                .addPathPatterns("/**")
+                .excludePathPatterns(new String[]{"/resources/**","/pages/**"});
     }
 }
