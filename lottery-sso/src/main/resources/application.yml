@@ -1,6 +1,22 @@
 spring:
   application:
     name: lottery-sso
+  kaptcha:
+    properties:
+      kaptcha.border: 'no'
+      kaptcha.border.color: 105,179,90
+      kaptcha.textproducer.font.color: blue
+      kaptcha.image.width: "125"
+      kaptcha.image.height: "45"
+      kaptcha.textproducer.font.size: "45"
+      kaptcha.textproducer.char.length: "4"
+      kaptcha.textproducer.font.names: 宋体,楷体,微软雅黑
+  mvc:
+    view:
+      prefix: /pages
+      suffix: .html
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/static/pages/
 dubbo:
   application:
     id: lottery-sso
@@ -21,3 +37,17 @@ lottery:
       version:  1.0.0
 server:
   port: 8081
+kaptcha:
+  border: no
+  textproducer:
+    font:
+      color: 105,179,90
+      size: 45
+      names: 宋体,楷体,微软雅黑
+    char:
+      length: 4
+
+  image:
+    width: 125
+    height: 45
+
